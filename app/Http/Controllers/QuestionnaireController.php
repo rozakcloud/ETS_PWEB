@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Questionnaire;
 use Illuminate\Http\Request;
 
 class QuestionnaireController extends Controller
@@ -13,7 +14,9 @@ class QuestionnaireController extends Controller
 
     public function create()
     {
-        return view('questionnaire.create');
+        $var = Questionnaire::find(1);
+        // dd($var->questions);
+        return view('questionnaire.create', compact('var'));
     }
 
     public function store()
