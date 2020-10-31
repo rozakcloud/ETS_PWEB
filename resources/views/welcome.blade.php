@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Welcome!</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -78,10 +78,16 @@
                     @endauth
                 </div>
             @endif
-
+            
             <div class="content">
+            <div class="pic-container">
+                <img src="uploads/Questionnaire.png" alt="" style="width:20%">
+            </div>
                 <div class="title m-b-md">
-                    Questionnaire
+                    Easy Questionnaire
+                </div>
+                <div class="text-justify" >
+                    <h2>Creating questionnaires has never been easier!</h2>
                 </div>
             </div>
         </div>
