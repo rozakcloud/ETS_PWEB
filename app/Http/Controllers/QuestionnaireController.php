@@ -14,9 +14,7 @@ class QuestionnaireController extends Controller
 
     public function create()
     {
-        $var = Questionnaire::find(1);
-        // dd($var->questions);
-        return view('questionnaire.create', compact('var'));
+        return view('questionnaire.create');
     }
 
     public function store()
@@ -36,5 +34,16 @@ class QuestionnaireController extends Controller
         $questionnaire->load('questions.answers.responses');
 
         return view('questionnaire.show', compact('questionnaire'));
+    }
+
+    public function destroy(Questionnaire $questionnaire)
+    {
+        $questionnaire->questions()->delete();
+        $questionnaire->surveys()->delete();
+        $questionnaire->delete();
+
+        $questionnaires = auth()->user()->questionnaires;
+
+        return redirect('/home');
     }
 }

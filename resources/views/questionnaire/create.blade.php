@@ -8,11 +8,6 @@
                 <div class="card-header">Create New Questionnaire</div>
 
                 <div class="card-body">
-
-                    @foreach ($var->questions as $question)
-                    {{-- {{ $question->question }} --}}
-
-                    @endforeach
                     <form action="/questionnaires" method="post">
 
                         @csrf
